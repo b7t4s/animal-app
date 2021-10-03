@@ -65,7 +65,7 @@ if (strlen($caption) > 140) {
 }
 
 //ファイルのバリデーション
-//ファイルサイズが1MB未満か
+//ファイルサイズが2MB未満か
 if ($filesize > 2097152 || $file_err == 2) {
     array_push($err_msgs, 'ファイルサイズは2MB未満にしてください。');
 }
