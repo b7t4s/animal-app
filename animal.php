@@ -85,23 +85,24 @@
     <section class="section">
         <div class="container">
             <!-- TODO: データベース取得した投稿件数でループ -->
-            <!-- Media object -->
-            <div class="d-flex">
-                <!-- 投稿画像 -->
-                <!-- TODO: データベース取得した画像パスに修正 -->
-                <img src="./images/207493.jpg" alt="John Doe" class="me-3 rounded-circle"
-                    style="width: 60px; height: 60px;" />
-                <!-- タイトル＆本文 -->
-                <div>
-                    <h5 class="fw-bold">
-                        ワンちゃんに癒やされた一日。。。（投稿タイトル）
-                        <small class="text-muted">2021-10-03</small>
-                    </h5>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua.
-                    </p>
+            <div>
+                <!-- ここでDBに登録した画像パスから画像を表示している -->
+                <?php foreach ($files as $file): ?>  
+                <!-- Media object -->
+                <div class="d-flex">
+                    <!-- 投稿画像 -->
+                    <!-- TODO: データベース取得した画像パスに修正 -->
+                    <img src="<?php echo "{$file['file_path']}"; ?>" alt="">
+                    <!-- タイトル＆本文 -->
+                    <div>
+                        <h5 class="fw-bold">
+                            ワンちゃんに癒やされた一日。。。（投稿タイトル）
+                            <small class="text-muted">2021-10-03</small>
+                        </h5>
+                        <p><?php echo h("{$file['caption']}"); ?></p>
+                    </div>
                 </div>
+            <?php endforeach;?>
             </div>
             <!-- TODO: 以下は削除 -->
             <!-- Media object -->
