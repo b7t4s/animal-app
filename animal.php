@@ -105,23 +105,6 @@
             <?php endforeach;?>
             </div>
             <!-- TODO: 以下は削除 -->
-            <!-- Media object -->
-            <div class="d-flex">
-                <!-- 投稿画像 -->
-                <img src="./images/207493.jpg" alt="John Doe" class="me-3 rounded-circle"
-                    style="width: 60px; height: 60px;" />
-                <!-- タイトル＆本文 -->
-                <div>
-                    <h5 class="fw-bold">
-                        ワンちゃんに癒やされた一日。。。（投稿タイトル）
-                        <small class="text-muted">2021-10-03</small>
-                    </h5>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </div>
-            </div>
         </div>
     </section>
 
