@@ -67,17 +67,22 @@
     <!-- TODO: upload.php のコードを参考に画像とテキストの入力フォームを作成する -->
     <section class="section">
         <div class="container">
-        <form enctype="multipart/form-data" action="./file_upload.php" method="POST">
-        <div class="file-up">
-            <input type="hidden" name="MAX_FILE_SIZE" value="2097152" />
-            <input name="img" type="file" accept="image/*" />
-        </div>
-        <div>
-            <textarea name="caption" placeholder="キャプション（140文字以下）" id="caption"></textarea>
-        </div>
-        <div class="submit">
-            <input type="submit" value="送信" class="btn" />
-        </div>
+            <form enctype="multipart/form-data" action="./animal.php" method="POST">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">名前</label>
+                    <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="名前">
+                </div>
+                <div class="file-up">
+                    <input type="hidden" name="MAX_FILE_SIZE" value="2097152" />
+                    <input name="img" type="file" accept="image/*" />
+                </div>
+                <div>
+                    <textarea name="caption" placeholder="キャプション（140文字以下）" id="caption"></textarea>
+                </div>
+                <div class="submit">
+                    <input type="submit" value="送信" class="btn" />
+                </div>
+            </form>
         </div>
     </section>
 
@@ -88,21 +93,21 @@
             <div>
                 <!-- ここでDBに登録した画像パスから画像を表示している -->
                 <?php foreach ($files as $file): ?>  
-                <!-- Media object -->
-                <div class="d-flex">
-                    <!-- 投稿画像 -->
-                    <!-- TODO: データベース取得した画像パスに修正 -->
-                    <img src="<?php echo "{$file['file_path']}"; ?>" alt="">
-                    <!-- タイトル＆本文 -->
-                    <div>
-                        <h5 class="fw-bold">
-                            ワンちゃんに癒やされた一日。。。（投稿タイトル）
-                            <small class="text-muted">2021-10-03</small>
-                        </h5>
-                        <p><?php echo h("{$file['caption']}"); ?></p>
+                    <!-- Media object -->
+                    <div class="d-flex">
+                        <!-- 投稿画像 -->
+                        <!-- TODO: データベース取得した画像パスに修正 -->
+                        <img src="<?php echo "{$file['file_path']}"; ?>" alt="">
+                        <!-- タイトル＆本文 -->
+                        <div>
+                            <h5 class="fw-bold">
+                                ワンちゃんに癒やされた一日。。。（投稿タイトル）
+                                <small class="text-muted">2021-10-03</small>
+                            </h5>
+                            <p><?php echo h("{$file['caption']}"); ?></p>
+                        </div>
                     </div>
-                </div>
-            <?php endforeach;?>
+                <?php endforeach;?>
             </div>
             <!-- TODO: 以下は削除 -->
         </div>

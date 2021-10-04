@@ -53,7 +53,7 @@ textarea {
 </style>
 
 <body>
-    <!-- <form enctype="multipart/form-data" action="./file_upload.php" method="POST">
+    <form enctype="multipart/form-data" action="./animal.php" method="POST">
         <div class="file-up">
             <input type="hidden" name="MAX_FILE_SIZE" value="2097152" />
             <input name="img" type="file" accept="image/*" />
@@ -64,7 +64,7 @@ textarea {
         <div class="submit">
             <input type="submit" value="送信" class="btn" />
         </div>
-    </form> -->
+    </form> 
     <div>
         <!-- ここでDBに登録した画像パスから画像を表示している -->
         <?php foreach ($files as $file): ?>
