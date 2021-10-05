@@ -36,7 +36,7 @@ if(!empty($_POST['btn_submit'])) {
     }
 
     if(empty($error_message)) {
-
+        /*コメントアウト
         if($file_handle = fopen( FILENAME,"a")) {
 
             //書き込み日時を取得
@@ -54,6 +54,7 @@ if(!empty($_POST['btn_submit'])) {
             $success_message = 'メッセージを書き込みました。';
 
         }  
+        ここまでコメントアウト*/
     }
 }
 
