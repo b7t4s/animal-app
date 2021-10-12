@@ -90,7 +90,7 @@ if (count($err_msgs) === 0) {
             if ($result) {
                 echo 'データベースに保存しました。';
                 // リダイレクト
-                header("Location: ./animal.php");
+                header("Location: ./upload.php");
             } else {
                 echo 'データベースへの保存が失敗しました。';
             }
@@ -110,4 +110,4 @@ if (count($err_msgs) === 0) {
 
 ?>
 
-<a href="./upload.php">戻る</a>
+<a href="./animal.php">戻る</a>

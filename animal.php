@@ -69,8 +69,8 @@
         <div class="container">
             <form enctype="multipart/form-data" action="./animal.php" method="POST">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">名前</label>
-                    <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="名前">
+                    <label for="file_name" class="form-label">名前</label>
+                    <input type="text" class="form-control" id="file_name" placeholder="名前">
                 </div>
                 <div class="file-up">
                     <input type="hidden" name="MAX_FILE_SIZE" value="2097152" />
@@ -91,8 +91,8 @@
         <div class="container">
             <!-- TODO: データベース取得した投稿件数でループ -->
             <div>
-                <!-- ここでDBに登録した画像パスから画像を表示している -->
                 <?php foreach ($files as $file): ?>  
+                <!-- ここでDBに登録した画像パスから画像を表示している -->
                     <!-- Media object -->
                     <div class="d-flex">
                         <!-- 投稿画像 -->

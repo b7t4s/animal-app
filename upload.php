@@ -53,7 +53,7 @@ textarea {
 </style>
 
 <body>
-    <form enctype="multipart/form-data" action="./animal.php" method="POST">
+    <form enctype="multipart/form-data" action="./file_upload.php" method="POST">
         <div class="file-up">
             <input type="hidden" name="MAX_FILE_SIZE" value="2097152" />
             <input name="img" type="file" accept="image/*" />
