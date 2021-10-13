@@ -1,3 +1,8 @@
+<?php
+require_once './dbc.php';
+$files = getAllFile();
+
+?>
 <!doctype html>
 <html lang="ja">
 
